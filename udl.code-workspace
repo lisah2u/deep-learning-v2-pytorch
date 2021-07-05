@@ -8,15 +8,54 @@
 		},
 		{
 			"path": "../grokkin"
+		},
+		{
+			"path": "project-bikesharing"
+		},
+		{
+			"path": "intro-to-pytorch"
+		},
+		{
+			"path": "convolutional-neural-networks"
 		}
 	],
 	"settings": {
-		"jupyter.jupyterServerType": "local"
+		"jupyter.jupyterServerType": "local",
+		"git.ignoreLimitWarning": true
 	},
 	"launch": {
 		"version": "0.2.0",
 		"configurations": [
-
+			{
+				"type": "aws-sam",
+				"request": "direct-invoke",
+				"name": "project-bikesharing:Predicting_bike_sharing_data.get_ipython (python3.8)",
+				"invokeTarget": {
+					"target": "code",
+					"projectRoot": "/Users/lisa/code/deep-learning-v2-pytorch/project-bikesharing",
+					"lambdaHandler": "Predicting_bike_sharing_data.get_ipython"
+				},
+				"lambda": {
+					"runtime": "python3.8",
+					"payload": {},
+					"environmentVariables": {}
+				}
+			},
+			{
+				"type": "aws-sam",
+				"request": "direct-invoke",
+				"name": "project-bikesharing:Predicting_bike_sharing_data.get_ipython (python3.8)",
+				"invokeTarget": {
+					"target": "code",
+					"projectRoot": "",
+					"lambdaHandler": "Predicting_bike_sharing_data.get_ipython"
+				},
+				"lambda": {
+					"runtime": "python3.8",
+					"payload": {},
+					"environmentVariables": {}
+				}
+			},
 			{
 				"name": "Python: Current File",
 				"type": "python",

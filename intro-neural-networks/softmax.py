@@ -36,3 +36,29 @@ softmax([1,2,3])
 
 # [0.09003057317038046, 0.24472847105479767, 0.6652409557748219]
 
+# %%
+# Quiz 
+# Based on the above video, let's define the combination 
+# of two new perceptrons as w1*0.4 + w2*0.6 + b. 
+# Which of the following values for the weights and the 
+# bias would result in the final probability of the point 
+# to be 0.88?
+
+def sigmoid(x):
+    return 1/(1+np.exp(-x))
+
+# Output (prediction) formula
+def output_formula(features, weights, bias):
+    return sigmoid(np.dot(features, weights) + bias)
+
+inputs = [.4,.6]
+w1 = [2,6]
+b1 = -2
+w2 = [3,5]
+b2 = -2.2
+w3 = [5,4]
+b3 = -3
+
+print(output_formula(inputs,w2,b2))
+
+# %%
